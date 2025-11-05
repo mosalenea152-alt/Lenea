@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Navigation Bar</title>
+<style>
+    /* Reset default margins and paddings */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+    }
+    header{
+        background-color: #333;
+        color: azure;
+        padding: 15px 20px;
+        text-align: center;
+    }
+    header nav a{
+        color: azure;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+
+    }
+            header nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main content area */
+        main {
+            padding: 20px;
+            min-height: 60vh; /* Ensures footer stays at bottom */
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    /* Navbar container */
+    nav {
+        background-color: #333;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    /* Logo */
+    .logo {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    /* Navigation links */
+    .nav-links {
+        list-style: none;
+        display: flex;
+    }
+
+    .nav-links li {
+        margin-left: 20px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: white;
+        transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: #ff9800;
+    }
+
+    /* Hamburger menu (hidden on desktop) */
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 4px 0;
+        transition: 0.4s;
+    }
+
+    /* Mobile view */
+    @media (max-width: 768px) {
+        .nav-links {
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background-color: #333;
+            flex-direction: column;
+            width: 200px;
+            display: none;
+        }
+
+        .nav-links li {
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .hamburger {
+            display: flex;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+        .flex-container{
+            background-color: #333;
+            color: black;
+            display:flex;
+            flex-grow: inherit;
+            flex-direction: column-reverse;
+            flex-direction: row-reverse;
+            padding: 0%;
+            margin:0cap;
+        }
+        .flex-item{
+            background-color: #333e;
+            display: contents;
+            padding: 0%;
+            font-size: small;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    }
+</style>
+</head>
+    <header>
+        <h1>IWB PTY LTD</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+</header>
+<a href="https://www.IWB PTY LTD.html">learn more</a>
+    <main>
+        <h2>Fighting e-waste, Forging a Sustainable Future</h2>
+        <p>Welcome to the IWB PTY LTD COMPANY</p>
+    </main>
+
+
+
+<script>
+    // Toggle mobile menu
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>
